@@ -2,6 +2,7 @@ var gf;
 var feed = []; // an empty array
 var numFood = 10;
 
+var a = [1,2,3]
 function setup() {
     createCanvas(640,480);
     gf = new Giraffe;
@@ -13,7 +14,7 @@ function setup() {
 
 function draw() {
     background('#FFFAED');
-    sq.display();
+    gf.display();
     
     // display all the food
     for(var i = 0; i < numFood; i++) {
@@ -22,7 +23,7 @@ function draw() {
 }
 
 function mousePressed() {
-    sq.eat();
+    gf.eat();
 }
 
 function Food(x, y) {
@@ -37,7 +38,7 @@ function Food(x, y) {
     }
 }
 
-function Squirrel() {
+function Giraffe() {
     // instance variables
     var x = mouseX;
     var y = mouseY;
