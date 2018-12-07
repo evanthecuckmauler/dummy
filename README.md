@@ -16,3 +16,5 @@ https://daringfireball.net/projects/markdown/syntax
 git add *  
 git commit -m "Some message"  
 git push origin master  
+
+This is an [example link](http://example.com/).  
