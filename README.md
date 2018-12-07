@@ -18,3 +18,7 @@ git commit -m "Some message"
 git push origin master  
 
 This is an [example link](http://example.com/).  
+
+*   Candy.
+*   Gum.
+*   Booze.
