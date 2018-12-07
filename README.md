@@ -13,6 +13,6 @@ https://daringfireball.net/projects/markdown/syntax
 >
 > ## This is an H2 in a blockquote
 
-git add *
-git commit -m "Some message"
-git push origin master
+git add *  
+git commit -m "Some message"  
+git push origin master  
