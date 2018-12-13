@@ -1,6 +1,9 @@
 var puppy;
 var feed = []; // an empty array
 var numFood = 10;
+var b = 130;
+var c = 250;
+var d = 0;
 
 var a = [1, 2, 3];
 
@@ -27,12 +30,14 @@ function draw() {
 
 function mousePressed() {
     puppy.eat();
+    b *= 1.1;
+    c *= 1.1;
+    d += 1;
 }
 
 function Food(x, y) {
     // keyword this
     // makes variables public on the object
-
     // public instance variables
     this.x = x;
     this.y = y;
@@ -65,6 +70,7 @@ function Puppy() {
             if (r1 + r2 > d) {
                 feed.splice(i, 1);
                 feed.push(new Food(random(width), random(height)));
+                
             }
         }
     };
@@ -74,6 +80,12 @@ function Puppy() {
 
         x = mouseX;
         y = mouseY;
+         if(d > 9) {
+            b = 130;
+            c = 250;
+            d = 0; 
+         }
+
 
         //head
         noStroke();
@@ -81,7 +93,7 @@ function Puppy() {
         push();
         translate(x, y);
         rotate(Math.PI / 4);
-        ellipse(0 ,0, 130, 250);
+        ellipse(0 ,0, b, c);
         pop(); 
 
         //eyeRight
